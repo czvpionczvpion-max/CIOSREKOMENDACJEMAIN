@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="./image.svg" />
-    <title>ROZDANIA - CIOS REKOMENDACJE</title>
+    <title>ZWYCIĘZCA ZEGARKA - CIOS REKOMENDACJE</title>
     <style>
         * {
             box-sizing: border-box;
@@ -406,7 +406,7 @@
             pointer-events: none;
         }
 
-        /* Sekcja rozdania */
+        /* Sekcja rozdania - nowa galeria */
         .giveaway-section {
             width: 100%;
             max-width: 1200px;
@@ -414,12 +414,6 @@
             padding: 0 1rem;
             position: relative;
             z-index: 2;
-        }
-        
-        .giveaway-grid {
-            display: flex;
-            justify-content: center;
-            margin: 0;
         }
         
         .giveaway-card {
@@ -434,7 +428,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            max-width: 550px;
+            max-width: 700px;
             width: 100%;
             margin: 0 auto;
         }
@@ -445,110 +439,159 @@
             box-shadow: 0 12px 28px rgba(159, 252, 1, 0.25);
         }
         
-        .card-badge {
-            display: inline-block;
-            padding: 8px 24px;
-            background: linear-gradient(135deg, #0a3110 0%, #1f5a12 50%, #3a8f1f 100%);
-            color: #ffffff;
-            font-size: 0.85rem;
+        /* GALERIA ZDJĘĆ - przewijanie w lewo/prawo */
+        .winner-gallery {
+            width: 100%;
+            margin: 25px 0 20px;
+            position: relative;
+        }
+        
+        .gallery-title {
+            font-size: 2rem;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 40px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(159, 252, 1, 0.5);
-            box-shadow: 0 0 12px rgba(159, 252, 1, 0.3);
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
+            color: #9ffc01;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(159,252,1,0.5);
         }
         
-        .card-badge.ended {
-            background: linear-gradient(135deg, #3a3a3a, #1e1e1e);
-            border-color: rgba(255,255,255,0.2);
-            box-shadow: none;
-            color: #ccc;
-        }
-        
-        .card-title {
-            font-size: 2.2rem;
+            .gallery-title2 {
+            font-size: 0.9rem;
             font-weight: 800;
-            margin: 0.5rem 0 0.5rem;
             color: #ffffff;
-            line-height: 1.2;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px rgba(159,252,1,0.5);
+        }
+
+        .gallery-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
-        .card-price {
-            font-size: 1.8rem;
+        .gallery-wrapper {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #9ffc01 #1e1e1e;
+            border-radius: 28px;
+            width: 100%;
+            cursor: grab;
+        }
+        
+        .gallery-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .gallery-wrapper::-webkit-scrollbar-track {
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+        
+        .gallery-wrapper::-webkit-scrollbar-thumb {
+            background: #9ffc01;
+            border-radius: 10px;
+        }
+        
+        .gallery-slides {
+            display: flex;
+            gap: 20px;
+            padding: 15px 10px;
+        }
+        
+        .gallery-slide {
+            flex: 0 0 auto;
+            width: 280px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 2px solid rgba(159,252,1,0.4);
+            transition: all 0.2s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        
+        .gallery-slide:hover {
+            transform: scale(1.02);
+            border-color: #9ffc01;
+            box-shadow: 0 12px 28px rgba(159,252,1,0.2);
+        }
+        
+        .gallery-slide img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            display: block;
+            background: #111;
+        }
+        
+        .gallery-nav {
+            background: rgba(0,0,0,0.7);
+            border: 1px solid #9ffc01;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(8px);
+            color: #9ffc01;
+            font-size: 28px;
+            font-weight: bold;
+            user-select: none;
+            flex-shrink: 0;
+        }
+        
+        .gallery-nav:hover {
+            background: #9ffc01;
+            color: #0a0a0a;
+            transform: scale(1.1);
+            box-shadow: 0 0 12px #9ffc01;
+        }
+        
+        .winner-info {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 24px;
+            padding: 1.5rem;
+            margin: 20px 0 0;
+            border: 1px solid rgba(159, 252, 1, 0.3);
+            text-align: left;
+        }
+        
+        .winner-name {
+            color: #9ffc01;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .winner-detail {
+            color: #ddd;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            padding-left: 8px;
+            border-left: 3px solid #9ffc01;
+        }
+        
+        .watch-value {
+            font-size: 1.6rem;
             font-weight: 800;
             background: linear-gradient(135deg, #9ffc01, #bfff4d);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 1rem;
-        }
-        
-        .watch-image {
-            width: 100%;
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0,0,0,0.4);
-            border-radius: 24px;
-            padding: 20px;
-            border: 1px solid rgba(159, 252, 1, 0.2);
-        }
-        
-        .watch-img {
-            max-width: 80%;
-            max-height: 240px;
-            object-fit: contain;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
-            transition: transform 0.3s ease;
-        }
-        
-        .giveaway-card:hover .watch-img {
-            transform: scale(1.02);
-        }
-        
-        .contest-rules {
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 20px;
-            padding: 1.2rem;
-            margin-top: 0.5rem;
-            border: 1px solid rgba(159, 252, 1, 0.2);
-            text-align: left;
-        }
-        
-        .rules-title {
-            color: #9ffc01;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        
-        .rules-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .rules-list li {
-            color: #ddd;
-            margin-bottom: 8px;
-            padding-left: 24px;
-            position: relative;
-            font-size: 0.9rem;
-        }
-        
-        .rules-list li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #9ffc01;
-            font-weight: bold;
+            margin: 10px 0;
         }
         
         .contest-actions {
@@ -572,6 +615,7 @@
             font-size: 1rem;
             letter-spacing: 1px;
             cursor: pointer;
+            border: none;
         }
         
         .contest-button.primary {
@@ -601,14 +645,6 @@
             transform: translateY(-2px);
         }
         
-        .contest-button.disabled {
-            opacity: 0.6;
-            pointer-events: none;
-            filter: grayscale(0.2);
-            background: #2c2c2c;
-        }
-        
-        /* Divider */
         .divider-fade {
             width: 100%;
             max-width: 800px;
@@ -638,10 +674,12 @@
                 padding-top: 80px;
                 background-image: url("./mobile_bg.png");
             }
-            .card-title { font-size: 1.6rem; }
-            .card-price { font-size: 1.4rem; }
+            .gallery-title { font-size: 1.5rem; }
+            .gallery-slide { width: 220px; }
+            .gallery-nav { width: 36px; height: 36px; font-size: 22px; }
+            .winner-name { font-size: 1.2rem; }
+            .watch-value { font-size: 1.3rem; }
             .giveaway-card { padding: 1.2rem; }
-            .watch-img { max-width: 90%; max-height: 180px; }
             .contest-button { padding: 12px 16px; font-size: 0.9rem; }
             .pfp-logo { width: 42px; height: 42px; }
             .liquid-logo { font-size: 1.4rem; }
@@ -759,8 +797,8 @@
             </div>
             
             <ul class="liquid-menu" id="navMenu">
-                <li><a href="./index.html" class="active">STRONA GŁÓWNA</a></li>
-                <li><a href="./giveaways.html">EKSKLUZYWNE ROZDANIA</a></li>
+                <li><a href="./index.html">STRONA GŁÓWNA</a></li>
+                <li><a href="./giveaways.html" class="active">EKSKLUZYWNE ROZDANIA</a></li>
                 <li><a href="./wplacanie.html">JAK WPŁACAĆ / WYPŁACAĆ?</a></li>
                 <li><a href="./blokady.html">JAK OBEJŚĆ BLOKADY STRON?</a></li>
             </ul>
@@ -769,34 +807,46 @@
 
     <div class="main">
         <div class="giveaway-section">
-            <div class="giveaway-grid">
-                <div class="giveaway-card">
-                    <div class="card-badge ended">ZAKOŃCZONE</div>
-                    <h2 class="card-title">Cartier Santos</h2>
-                    <div class="card-price">38 000 PLN</div>
-                    
-                    <div class="watch-image">
-                        <img src="./zegarek.webp" alt="Cartier Santos" class="watch-img" style="filter: grayscale(0.3);">
+            <div class="giveaway-card">
+                <!-- Nagłówek ZWYCIĘZCA ZEGARKA -->
+                <h2 class="gallery-title">ZWYCIĘZCA ZEGARKA</h2>
+                <h2 class="gallery-title2">Cartier Santos - 38 000 PLN</h2>
+                
+                <!-- GALERIA 3 ZDJĘĆ 1080x1920 (przewijanie w lewo/prawo) -->
+                <div class="winner-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-nav" id="galleryPrev">❮</div>
+                        <div class="gallery-wrapper" id="galleryWrapper">
+                            <div class="gallery-slides" id="gallerySlides">
+                                <!-- 3 zdjęcia o wymiarach 1080x1920 (zachowane proporcje) -->
+                                <div class="gallery-slide">
+                                    <img src="WINNER2.jpg" alt="Zwycięzca zdjęcie 1" loading="lazy">
+                                </div>
+                                <div class="gallery-slide">
+                                    <img src="WINNER1.jpg" alt="Zwycięzca zdjęcie 2" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-nav" id="galleryNext">❯</div>
                     </div>
-                    
-                    <div class="contest-rules">
-                        <h3 class="rules-title">Konkurs został zakończony</h3>
-                        <ul class="rules-list">
-                            <li>Zwycięzca został wyłoniony i skontaktowaliśmy się z nim</li>
-                            <li>Gratulujemy szczęśliwcowi!</li>
-                            <li>Dziękujemy wszystkim za udział</li>
-                            <li>Obserwuj nasze socialmedia po więcej okazji</li>
-                        </ul>
+                </div>
+                
+                <!-- Informacje o zwycięzcy i zegarku -->
+                <div class="winner-info">
+                    <div class="winner-name">
+                        • NAGRODA ODEBRANA 
+                        <span style="font-size:0.9rem; background:#1e2a0a; padding:4px 12px; border-radius:40px;">ZAKOŃCZONY</span>
                     </div>
-                    
-                    <div class="contest-actions">
-                        <a href="#" class="contest-button primary disabled" style="opacity:1; background-color:rgb(119, 182, 47);" onclick="return false;">
-                            ✖ KONKURS ZAKOŃCZONY
-                        </a>
-                        <a href="https://www.tiktok.com/@mr_cios/video/7614187765017758979" class="contest-button secondary" target="_blank">
-                            FILM Z ODBIORU ZEGARKA
-                        </a>
-                    </div>
+                    <div class="winner-detail">📅 Data odbioru: 05.03.2026</div>
+                    <div class="winner-detail">📍 Oficjalne wręczenie nagrody potwierdzone</div>
+                    <div class="winner-detail">🎁 Dziękujemy wszystkim uczestnikom za wspólną zabawę!</div>
+                </div>
+                
+                <div class="contest-actions">
+                    <!-- Zamiast "X KONKURS ZAKOŃCZONY" teraz przycisk gratulacyjny -->
+                    <a href="https://www.tiktok.com/@mr_cios/video/7614187765017758979" class="contest-button primary" target="_blank">
+                        🎬 OBEJRZYJ FILM Z ODBIORU ZEGARKA
+                    </a>
                 </div>
             </div>
             
@@ -853,6 +903,62 @@
                 document.body.style.overflow = '';
             }
         });
+
+        // GALERIA Z PRZEWIJANIEM (lewo/prawo)
+        const wrapper = document.getElementById('galleryWrapper');
+        const prevBtn = document.getElementById('galleryPrev');
+        const nextBtn = document.getElementById('galleryNext');
+        
+        if (wrapper && prevBtn && nextBtn) {
+            // Przewijanie o szerokość jednego elementu + gap
+            const scrollAmount = () => {
+                const slide = document.querySelector('.gallery-slide');
+                if (!slide) return 300;
+                const slideWidth = slide.offsetWidth;
+                const gap = 20; // zgodne z gap w .gallery-slides
+                return slideWidth + gap;
+            };
+            
+            prevBtn.addEventListener('click', () => {
+                wrapper.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                wrapper.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+            });
+            
+            // opcjonalnie: obsługa przeciągania (grab cursor)
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            wrapper.addEventListener('mousedown', (e) => {
+                isDown = true;
+                wrapper.style.cursor = 'grabbing';
+                startX = e.pageX - wrapper.offsetLeft;
+                scrollLeft = wrapper.scrollLeft;
+            });
+            
+            wrapper.addEventListener('mouseleave', () => {
+                isDown = false;
+                wrapper.style.cursor = 'grab';
+            });
+            
+            wrapper.addEventListener('mouseup', () => {
+                isDown = false;
+                wrapper.style.cursor = 'grab';
+            });
+            
+            wrapper.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - wrapper.offsetLeft;
+                const walk = (x - startX) * 1.5;
+                wrapper.scrollLeft = scrollLeft - walk;
+            });
+            
+            wrapper.style.cursor = 'grab';
+        }
 
         async function checkKickLiveStatus() {
             const liveStatus = document.getElementById('liveStatus');
