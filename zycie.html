@@ -501,8 +501,10 @@
         <div class="story-flex">
             <div class="story-text">
                 <h3>Dlaczego <span class="highlight">zaryzykowałem</span> wszystko?</h3>
-                <p>Miałem stabilną pracę, pewność, schemat. Ale w środku czułem, że to nie jest ŻYCIE. Postawiłem wszystko na wylot na Cypr, na nieprzetarte szlaki, na ekskluzywność. <strong>Straciłem przyjaciół?</strong> Niektórych tak. Zyskałem jednak szacunek i wolność.</p>
-                <p>Pierwsze miesiące były brutalne – niepewność, presja, 16 godzin dziennie. Ale moment, w którym zobaczyłem pierwsze efekty ... nie zamieniłbym tego na żaden etat.</p>
+                <p>Miałem życie, które z zewnątrz mogło wyglądać jak jakiś „film o wolności”, ale prawda była zupełnie inna. <strong>Straciłem przyjaciół?</strong> Niestabilne, chaotyczne, bez żadnych fundamentów. Często nie miałem praktycznie nic zarobionego, żyłem od jednej walki do drugiej, od jednego zlecenia do kolejnego ryzyka.</p>
+                <p>W kamerze wszystko wyglądało dobrze – kadry, klimat, „ekskluzywność”. Ale to była tylko fasada. Poza ujęciami była presja, stres i ciągłe kombinowanie, jak przetrwać kolejny tydzień.
+Z czasem zaczęło się to pogarszać jeszcze bardziej, bo wszedł w to hazard. Najpierw jako „emocje”, potem jako sposób na szybkie pieniądze, a finalnie coś, co tylko pogłębiło chaos i zabrało resztki stabilności.
+To, co kiedyś wyglądało jak wolność, w rzeczywistości było ucieczką i walką o przetrwanie.</p>
                 <div class="risk-stats">
                     <span class="stat-bubble">• WIELE NOCY BEZ SNU</span>
                     <span class="stat-bubble">• BRAK WIEDZY </span>
@@ -522,7 +524,7 @@
         </div>
         <div class="milestone-item">
             <div class="milestone-num">★</div>
-            <div class="milestone-text"><h4>Rzucenie stabilnej posady</h4><p>Największy strach. Miesiąc bez żadnego dochodu, ale presja dała mi skrzydła – pierwsza ekskluzywna współpraca przyszła szybciej niż myślałem.</p></div>
+            <div class="milestone-text"><h4>Rzucenie niestabilnej posady</h4><p>Największy strach. Miesiąc bez żadnego dochodu, ale presja dała mi skrzydła – pierwsza ekskluzywna współpraca przyszła szybciej niż myślałem.</p></div>
         </div>
         <div class="milestone-item">
             <div class="milestone-num">★</div>
@@ -576,17 +578,17 @@
     // Nazwy plików: c1.jpg, c2.jpg ... c8.jpg
     const riskTitles = [
         "SPOTKANIE Z SIMON LEVIEV", "SPEŁNIENIE MAŁEGO MARZENIA", "WIĘKSZA WYGRANA", "ZAKUPY DLA UKOCHANEJ",
-        "SPEŁNIENIE WIĘKSZEGO MARZENIA", "RYZYKO KASYNOWE", "WYPOŻYCZENIE SPORTOWEGO AUTA", "LEKKI ODPOCZYNEK"
+        "SPEŁNIENIE WIĘKSZEGO MARZENIA", "RYZYKO KASYNOWE", "WYDANIE 100 TYŚ NA ZAKUPY W DUBAJU", "PIĘKNY DOM Z BASENEM"
     ];
     const riskDesc = [
         "Spotkanie z Simonem Levievem było jak scena z filmu — elegancja, pewność siebie i nuta tajemnicy w powietrzu. Od pierwszej chwili roztaczał wokół siebie aurę luksusu, opowiadając historie, które brzmiały jak z innego świata. Kolacja? Stylowa, przy świecach, z idealnie dobranym winem i rozmowami, które wciągały coraz bardziej. Było trochę jak bajka… tylko z lekkim dreszczykiem niepewności, czy wszystko na pewno jest takie, jak się wydaje.",
-        "Wypożyczenie G-Klasy — mojego auta marzeń z dzieciństwa — było jak spełnienie czegoś, co kiedyś wydawało się totalnie nieosiągalne. Kiedy tylko wsiadłem do Mercedes-Benz G-Class, poczułem ten wyjątkowy klimat: potężna sylwetka, luksus w środku i świadomość, że prowadzę legendę. Każdy kilometr dawał czystą frajdę i satysfakcję..",
+        "Zakup luksusowego zegarka do kolekcji to coś więcej niż kolejny element — to prawdziwa perełka, która ma swoją historię i charakter. Moment wyboru, przymierzania i w końcu decyzji daje niesamowitą satysfakcję. Taki zegarek nie tylko uzupełnia kolekcję, ale też podkreśla styl i pasję do detali. To inwestycja w coś ponadczasowego — symbol klasy, osiągnięć i zamiłowania do rzeczy wyjątkowych.",
         "Większa wygrana w kasynie to był moment, którego nie da się zapomnieć. Najpierw napięcie, szybciej bijące serce i ta niepewność… a potem nagle wszystko się zmienia — wygrana! Adrenalina uderza, uśmiech sam pojawia się na twarzy, a świat na chwilę zwalnia. To uczucie, jakby los nagle stanął po Twojej stronie. Chwila pełna emocji, euforii i tej myśli: „to naprawdę się dzieje”.",
         "Zakupy dla ukochanej były czymś więcej niż tylko wydawaniem pieniędzy — to był gest wdzięczności za to, że była przy mnie od samego początku. Każda rzecz wybierana z myślą o niej, każdy detal miał znaczenie. To nie chodziło o ceny czy marki, tylko o emocje i pokazanie: „doceniam Cię, pamiętam i dziękuję”. Widok jej uśmiechu był najlepszą nagrodą — bezcenny moment, który zostaje na długo.",
         "Kupno wymarzonego, droższego zegarka to był moment, który smakował zupełnie inaczej niż zwykłe zakupy. To nie była spontaniczna decyzja — to było spełnienie marzenia, na które czekałem i pracowałem. Gdy w końcu założyłem go na nadgarstek, poczułem dumę i satysfakcję. Każde spojrzenie na ten zegarek przypomina, ile drogi już za mną i ile jeszcze przede mną. To nie tylko czasomierz — to symbol wytrwałości, ambicji i nagrody za własny wysiłek.",
         "Kolejny — z pozoru głupi, ale ryzykowny strzał w kasynie. Chwila zawahania, szybka decyzja i myśl: „raz się żyje”. Serce bije mocniej, wszystko dookoła jakby cichnie… i nagle — wygrana. Duża. Taka, która sprawia, że na sekundę przestajesz wierzyć, że to naprawdę się dzieje. Mieszanka szoku, euforii i niedowierzania. Ryzyko, które tym razem się opłaciło — historia, którą zapamiętasz na długo.",
-        "Wypożyczenie luksusowego McLaren to był czysty kosmos — moment, w którym marzenia z plakatów zaczęły żyć naprawdę. Niski, agresywny, niesamowicie szybki — już samo odpalenie silnika dawało ciarki. Każda sekunda za kierownicą to adrenalina i uczucie, że jesteś dokładnie tam, gdzie zawsze chciałeś być.",
-        "Odpoczynek z ukochaną to był moment, w którym wszystko inne przestało mieć znaczenie. Spokój, cisza i ta wyjątkowa bliskość — bez pośpiechu, bez presji. Wspólne chwile, rozmowy do późna i śmiech, który przychodzi naturalnie. To właśnie wtedy najbardziej czuć, co jest naprawdę ważne. Po całym szaleństwie i emocjach — chwila oddechu, ciepła i prawdziwego szczęścia."
+        "Wydanie 100 tysięcy na zakupy w Dubaj to czysty luksus i doświadczenie innego świata. Ekskluzywne butiki, światowe marki i poczucie, że przez chwilę żyjesz bez ograniczeń. Każdy zakup to nie tylko rzecz, ale też emocja i wspomnienie.",
+        "Piękny dom z basenem, luksus i codzienność jak z marzeń — miejsce, w którym mieszkam już prawie rok dzięki hazardowi. Wszystko wygląda jak spełnione życie na najwyższym poziomie, ale stoi za tym historia ryzyka, emocji i decyzji, które nie zawsze były proste."
     ];
     
     const galleryGrid = document.getElementById('riskGalleryGrid');
