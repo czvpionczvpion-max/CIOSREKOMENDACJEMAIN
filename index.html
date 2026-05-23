@@ -885,44 +885,26 @@
 
         <div class="bonus-section">
             <div class="bonus-grid">
-                <!-- Kafelki oryginalne -->
+                <!-- KAFELEK 1: SPINBARA (aktywny) -->
                 <div class="bonus-card">
-                    <div class="bonus-img"><img src="spinbara.png" alt="spinbara" id="imgBonus1"></div>
-                    <h3>150% OD DEPOZYTU + 150FS</h3>
+                    <div class="bonus-img"><img src="nv.svg" alt="spinbara" id="imgBonus1"></div>
+                    <h3>150% POWITALNY + 150FS</h3>
                     <div class="bonus-code">UŻYJ KODU : CIOS</div>
-                    <a href="https://spnbr.monalvor.com/?mid=260177_1711723" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
-                </div>
-                <div class="bonus-card">
-                    <div class="bonus-img"><img src="westace.webp" alt="dudespin" id="imgBonus2"></div>
-                    <h3>400% POWITALNY + 400FS</h3>
-                    <div class="bonus-code">UŻYJ KODU : CIOS</div>
-                    <a href="https://wstc.lynmonkel.com/?mid=365498_2108945" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
-                </div>
-                <div class="bonus-card">
-                    <div class="bonus-img"><img src="malinacasino.svg" alt="malinacasino" id="imgBonus3"></div>
-                    <h3>300% OD DEPOZYTU + 150FS</h3>
-                    <div class="bonus-code">UŻYJ KODU : CIOS</div>
-                    <a href="https://mlncur.lynnar.com/?mid=364828_2105215" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
-                </div>
-                <div class="bonus-card">
-                    <div class="bonus-img"><img src="SPINANGA.webp" alt="bonus4" id="imgBonus4"></div>
-                    <h3>400% DO DEPOZYTU + 450FS</h3>
-                    <div class="bonus-code">UŻYJ KODU : CIOS</div>
-                    <a href="https://spng.lynmonkel.com/?mid=348501_2113152" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
+                    <a href="https://pinalindrahusth.com/25086/29327?lp=00&click_id=%7BREPLACE%7D&sub_id_1=%7BREPLACE%7D&sub_id_2=%7BREPLACE%7D&sub_id_3=%7BREPLACE%7D&sub_id_4=%7BREPLACE%7D&param=%7BATP%7D" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
                 </div>
                 
-                <!-- NOWY PIĄTY KAFELEK - normalny bonus -->
+                <!-- KAFELEK 2: WESTACE (aktywny) -->
                 <div class="bonus-card">
-                    <div class="bonus-img"><img src="robocat.webp" alt="jacks casino" id="imgBonus5" onerror="this.src='https://placehold.co/140x100/1a2a1a/9ffc01?text=JACKS'"></div>
-                    <h3>300% OD DEPOZYTU + 150FS</h3>
+                    <div class="bonus-img"><img src="yepcasino.svg" alt="westace" id="imgBonus2"></div>
+                    <h3>200% POWITALNY + 50FS</h3>
                     <div class="bonus-code">UŻYJ KODU : CIOS</div>
-                    <a href="https://rbct.lynmonkel.com/?mid=353262_2114126" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
+                    <a href="https://pinalindrahusth.com/25453/29712?lp=00&click_id=%7BREPLACE%7D&sub_id_1=%7BREPLACE%7D&sub_id_2=%7BREPLACE%7D&sub_id_3=%7BREPLACE%7D&sub_id_4=%7BREPLACE%7D&param=%7BATP%7D" target="_blank" rel="noopener noreferrer" class="btn-odbierz">ODBIERZ</a>
                 </div>
 
-                <!-- NOWY SZÓSTY KAFELEK - Z BLUREM i napisem WKRÓTCE! -->
+                <!-- KAFELEK 5: WKRÓTCE 3 -->
                 <div class="bonus-card blur-card">
-                    <div class="bonus-img"><img src="question.png" alt="coming soon" id="imgBonus6" onerror="this.src='https://placehold.co/140x100/1a2a1a/9ffc01?text=???'"></div>
-                    <h3>SUPER BONUS</h3>
+                    <div class="bonus-img"><img src="question.png" alt="coming soon" id="imgBonus5" onerror="this.src='https://placehold.co/140x100/1a2a1a/9ffc01?text=???'"></div>
+                    <h3>EKSTRA OFERTA</h3>
                     <div class="bonus-code">KOD: ????</div>
                     <div class="btn-odbierz" style="cursor: default;">ODBIERZ</div>
                     <div class="coming-soon-overlay"><span>WKRÓTCE!</span></div>
@@ -1013,14 +995,14 @@
     document.addEventListener('DOMContentLoaded', checkKickLiveStatus);
     setInterval(checkKickLiveStatus, 60000);
 
-    // fallback dla obrazków
+    // fallback dla obrazków (tylko dla aktywnych bonusów, pozostałe mają placeholder)
     const fallback = (img, text) => { if(img && img.complete && img.naturalWidth === 0) img.src = `https://placehold.co/140x100/1a2a1a/9ffc01?text=${text}`; else if(img) img.onerror = () => img.src = `https://placehold.co/140x100/1a2a1a/9ffc01?text=${text}`; };
     fallback(document.getElementById('imgBonus1'), 'spinbara');
-    fallback(document.getElementById('imgBonus2'), 'dudespin');
-    fallback(document.getElementById('imgBonus3'), 'malinacasino');
-    fallback(document.getElementById('imgBonus4'), 'onlyspins');
-    fallback(document.getElementById('imgBonus5'), 'JACKS');
-    fallback(document.getElementById('imgBonus6'), 'SOON');
+    fallback(document.getElementById('imgBonus2'), 'westace');
+    // Dla blur kafelków obrazy są zastąpione pytajnikiem, ale też zabezpieczamy
+    fallback(document.getElementById('imgBonus3'), 'SOON');
+    fallback(document.getElementById('imgBonus4'), 'SOON');
+    fallback(document.getElementById('imgBonus5'), 'SOON');
     </script>
 </body>
 </html>
