@@ -609,6 +609,34 @@
             z-index: 1;
         }
 
+        .bonus-brand {
+            font-size: 0.95rem;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0 0 0.55rem;
+            line-height: 1.2;
+        }
+
+        .bonus-big {
+            font-size: 2.6rem;
+            font-weight: 900;
+            line-height: 1;
+            color: #9ffc01;
+            margin: 0.15rem 0 0.35rem;
+            letter-spacing: -1px;
+            text-shadow: 0 0 24px rgba(159, 252, 1, 0.25);
+        }
+
+        .bonus-extra {
+            margin: 0 0 0.55rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.35;
+        }
+
         .bonus-img {
             background: rgba(0, 0, 0, 0.35);
             border-radius: 16px;
@@ -632,7 +660,7 @@
         .bonus-card h3 {
             font-size: 1rem;
             font-weight: 800;
-            margin: 0.5rem 0 0.6rem;
+            margin: 0 0 0.45rem;
             color: #9ffc01;
             line-height: 1.3;
         }
@@ -685,6 +713,7 @@
                 gap: 0.9rem;
             }
             .bonus-card { min-height: 190px; padding: 1.2rem 0.8rem; }
+            .bonus-big { font-size: 2.15rem; }
             .soon-title { font-size: 1.05rem; letter-spacing: 2px; }
             .soon-mark { width: 52px; height: 52px; font-size: 1.3rem; border-radius: 14px; }
         }
@@ -697,6 +726,7 @@
                 margin: 0 auto;
             }
             .bonus-card { min-height: 170px; }
+            .bonus-big { font-size: 2.4rem; }
         }
 
         /* Divider */
@@ -898,19 +928,27 @@
         <div class="bonus-section">
             <div class="section-label">
                 <h2>Rekomendacje</h2>
-                <p>Nowe oferty pojawią się wkrótce</p>
+                <p>Wybierz ofertę i odbierz bonus z kodem</p>
             </div>
             <div class="bonus-grid">
-                <div class="bonus-card soon-card">
-                    <div class="soon-mark">?</div>
-                    <h3 class="soon-title">Wkrótce</h3>
-                    <p class="soon-sub">Nowa oferta w przygotowaniu</p>
+                <div class="bonus-card">
+                    <div class="bonus-img"><img src="./spinbetter-logo.png" alt="SpinBetter"></div>
+                    <div class="bonus-big">115</div>
+                    <h3>darmowych obrotów</h3>
+                    <p class="bonus-extra">+ 100% od 1. depozytu</p>
+                    <div class="bonus-code">KOD: GOLDENBOY</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="btn-odbierz">Kliknij aby odebrać</a>
                 </div>
-                <div class="bonus-card soon-card">
-                    <div class="soon-mark">?</div>
-                    <h3 class="soon-title">Wkrótce</h3>
-                    <p class="soon-sub">Nowa oferta w przygotowaniu</p>
+
+                <div class="bonus-card">
+                    <div class="bonus-img"><img src="./rave.png" alt="SlotRave"></div>
+                    <div class="bonus-big">100%</div>
+                    <h3>do 800 EUR</h3>
+                    <p class="bonus-extra">+ 120 darmowych spinów</p>
+                    <div class="bonus-code">KOD: GOLDENBOY</div>
+                    <a href="https://mo.zenlaneo.com/redirect.aspx?pid=414885&lpid=2712&bid=2172" target="_blank" rel="noopener noreferrer" class="btn-odbierz">Kliknij aby odebrać</a>
                 </div>
+
                 <div class="bonus-card soon-card">
                     <div class="soon-mark">?</div>
                     <h3 class="soon-title">Wkrótce</h3>
@@ -929,7 +967,7 @@
                     </svg>
                 </div>
                 <div class="requirement-text">
-                    <h3>Bonusy i rozdania tylko z kodem <span class="cios-code">CIOS</span></h3>
+                    <h3>Bonusy tylko z kodem <span class="cios-code">GOLDENBOY</span></h3>
                     <p>Wpisz kod przy rejestracji w polu „Kod promocyjny” lub „Bonus code”.</p>
                 </div>
             </div>
